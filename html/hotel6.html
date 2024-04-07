@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel</title>
+    <link rel ="stylesheet" href="/html2/project14/css/hotel.css">
+</head>
+<body>
+    <div class="navbar">
+        <p class="border"><a href="layout.html" style="text-decoration: none; color:  #F8E5EE;">Back</a></p>
+        <p class="border"><a href="index.html" style="text-decoration: none; color:  #F8E5EE; font-size: 30px;">AirBnb</a></p>
+        <p class="border"><a href="login.html" style="text-decoration: none; color:  #F8E5EE;">Log-in/Sign-in</a></p>
+    </div>
+    <div class="mainsection">
+        <div class="imagesection">
+            <div class="leftarrow" onclick="prevImage()">V</div>
+            <div class="imagesec">
+                <img src="/html2/project14/Images/one.jpg" id="currentImage" width="400px">
+            </div>
+            <div class="rightarrow" onclick="nextImage()">></div>
+        </div>
+        <div class="details">
+            <h1>Entire guest suite in Weligama</h1>
+            <P >Sri Lanka</P>
+            <P style="margin-bottom: 30px; margin-top: 30px;">4.0
+                ·
+                Check-in rating
+                Satisfactory experience
+            </P>
+            <div class="ammenities"  style="margin-bottom: 30px;">
+                <h2>Ammenities</h2>
+                <p><pre>
+        ❄️AC                ᯤWifi                    ♨️Geyser
+        
+        🖥️TV                🛗Eleveter            ⚡Power Backup</pre></p>
+            </div>
+            <P  >About this OYO</P>
+            <P  style="margin-bottom: 30px;" >A space for new-age travelers</P>
+            <div class="policies">
+                <h2>Hotel Policies</h2>
+                <ul>
+                    <li><pre>Check In - 12PM     Check Out - 11AM</pre></li>
+                    <li>Students are welcome</li>
+                    <li>Guests can check in using any local or outstation ID proof.</li>
+                </ul>
+            </div>
+            <a href="pcb.html"><button id="pcb">Proceed to Book</button></a>
+        </div>
+      
+    </div>
+    <footer>
+        <div class="BTT">
+            <p class="bttm">Back to Top</p>
+        </div>
+        <div class="gtku">
+            <ul>
+                <p>Get to Know us</p>
+                <a>About Us</a>
+                <a>Carrer</a>
+                <a>Blog</a>
+                <a>Support</a>
+            </ul>
+            <ul>
+                <p>Terms & Conditions</p>
+                <a>Guests Policy</a>
+                <a>Privacy Policy</a>
+                <a>Trust & Safety</a>
+                <a>Help</a>
+            </ul>
+            <ul>
+                <p>Responsible Disclosure</p>
+                <a>Cyber Awareness</a>
+                <a>Cyber Security</a>
+                <a>Advertise Your Homes</a>
+                <a>List Your Property</a>
+            </ul>
+        </div>
+        <div class="logo">
+            AirBnb
+        </div>
+     </footer>
+     <script src ="/html2/project13/js/layout.js"></script>
+     <script src="/html2/project13/data/itemhotel.js"></script>
+     <script>
+        var images = ["/html2/project14/Images/one.jpg", "/html2/project14/Images/two.jpg", "/html2/project14/Images/three.jpg"]; //O Add your image URLs here
+        var currentIndex = 0;
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            document.getElementById('currentImage').src = images[currentIndex];
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            document.getElementById('currentImage').src = images[currentIndex];
+        }
+     </script>
+</body>
+</html>
